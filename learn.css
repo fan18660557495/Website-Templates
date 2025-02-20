@@ -1,0 +1,512 @@
+/*
+ * @file learn.css
+ * @description 范米花儿的网站模版，Trae搭建，仅供学习使用
+ * @author 范米花儿
+ * @copyright 范米花儿
+ */
+
+/* 字体定义 */
+@font-face {
+    font-family: 'AlimamaShuHeiTi-Bold';
+    src: url('assets/fonts/AlimamaShuHeiTi-Bold.ttf') format('truetype');
+}
+
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基础样式设置 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1D2129;
+}
+
+p {
+    color: #4E5969;
+}
+
+/* 页面头部样式 */
+.header {
+    position: relative;
+    color: #1D2129;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 页面头部样式 */
+.header {
+    color: #1D2129;
+    padding: 1rem 0;
+    min-height: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    padding-top: 30px; /* 增加上边距以避免内容被固定导航栏遮挡 */
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 70px; /* 移动端导航栏换行时增加更多上边距 */
+    }
+}
+
+/* 导航栏样式 */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 70px;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(197, 214, 255, 0.3));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(22, 93, 255, 0.1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Logo样式 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    fill: #165DFF;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1D2129;
+}
+
+/* 导航菜单样式 */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: #1D2129;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #165DFF;
+    text-decoration: underline;
+}
+
+.nav-menu a.active {
+    color: #165DFF;
+    text-decoration: none;
+}
+
+/* 登录按钮样式 */
+.nav-menu .login-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #165DFF !important;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #165DFF;
+    transition: all 0.3s;
+}
+
+.nav-menu .login-button:hover {
+    background-color: #165DFF;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* 主要内容区域样式 */
+.templates-showcase {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(197, 214, 255, 0.3));
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-block {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-family: 'AlimamaShuHeiTi-Bold', sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1D2129;
+}
+
+.section-title .highlight {
+    color: #165DFF;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #4E5969;
+}
+
+/* 搜索框样式 */
+.template-search {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 48px;
+    border: 2px solid #E5E6EB;
+    border-radius: 24px;
+    font-size: 1rem;
+    color: #1D2129;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #165DFF;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22, 93, 255, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #86909C;
+}
+
+.clear-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    color: #86909C;
+    cursor: pointer;
+    display: none;
+    padding: 4px;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.clear-button:hover {
+    color: #165DFF;
+}
+
+.clear-button.visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 文档内容区域样式 */
+.docs-section {
+    display: flex;
+    gap: 40px;
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 文档导航样式 */
+.docs-nav {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 100px);
+    overflow: visible;
+    transition: all 0.3s ease;
+    background: white;
+    border-right: 1px solid #E5E6EB;
+    padding-right: 1rem;
+}
+
+.docs-nav.collapsed {
+    width: 60px;
+    overflow: visible;
+}
+
+.docs-nav.collapsed + .docs-content {
+    margin-left: -220px; /* 280px - 60px */
+}
+
+/* 折叠按钮样式 */
+.toggle-nav {
+    position: absolute;
+    right: -18px;
+    top: 8%;
+    transform: translateY(-55%);
+    background: #ffffff;
+    border: #E5E6EB 1px solid;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.toggle-nav:hover {
+    color: #165DFF;
+    border-color: #165DFF;
+}
+
+.toggle-nav svg {
+    width: 16px;
+    height: 16px;
+}
+
+.docs-nav.collapsed .toggle-nav {
+    transform: rotate(180deg);
+}
+
+/* 导航菜单折叠样式 */
+.docs-nav.collapsed .docs-nav-title {
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.docs-nav.collapsed .docs-nav-title span,
+.docs-nav.collapsed .docs-nav-list {
+    opacity: 0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.docs-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px 15px 0;
+    margin: 0 15px;
+    border-bottom: 1px solid #e5e6eb;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.docs-nav-title span,
+.docs-nav-list {
+    opacity: 1;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.docs-nav-list {
+    list-style: none;
+    padding: 1rem 1rem 1rem 0;
+    margin: 0 1rem;
+}
+
+.docs-nav-item {
+    margin-bottom: 16px;
+}
+
+.docs-nav-link {
+    text-decoration: none;
+    color: #4E5969;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 8px 0;
+}
+
+.docs-nav-link:hover,
+.docs-nav-link.active {
+    color: #165DFF;
+}
+
+.docs-nav-sublist {
+    list-style: none;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.docs-nav-sublist .docs-nav-link {
+    font-size: 0.9rem;
+    padding: 4px 0;
+}
+
+.docs-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 70px);
+    margin-left: 12px;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 80px;
+}
+
+.content-section h1 {
+    margin-bottom: 1.5rem;
+    color: #1D2129;
+    font-size: 2rem;
+}
+
+.content-section h2 {
+    margin: 2rem 0 1rem;
+    color: #1D2129;
+    font-size: 1.5rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.content-section ul, 
+.content-section ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+.content-section h3 {
+    font-size: 1.2rem;
+    margin: 24px 0 12px;
+    color: #1D2129;
+}
+
+.content-section p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.content-section ul,
+.content-section ol {
+    margin-bottom: 16px;
+    padding-left: 24px;
+}
+
+.content-section li {
+    margin-bottom: 8px;
+    line-height: 1.8;
+}
+
+/* 页脚样式 */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(197, 214, 255, 0.3));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 100;
+}
+
+.footer p {
+    margin: 0;
+    color: #4E5969;
+}
+
+/* 为底部内容添加边距，避免被固定footer遮挡 */
+.main-content {
+    padding-bottom: 60px;
+}
+
+/* 响应式布局适配 */
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .search-input {
+        height: 40px;
+        padding: 0 40px;
+        font-size: 0.875rem;
+        border-radius: 20px;
+    }
+
+    .search-icon {
+        left: 28px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .clear-button {
+        right: 0.5rem;
+        padding: 0.25rem;
+        width: 28px;
+        height: 28px;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* 响应式布局样式 - 针对移动设备的样式调整 */
+@media (max-width: 768px) {
+    /* 导航容器响应式调整 - 改为垂直布局以适应小屏幕 */
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 5%;
+    }
+
+    /* 导航菜单响应式调整 - 优化移动端显示效果和间距 */
+    .nav-menu {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

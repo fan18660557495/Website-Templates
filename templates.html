@@ -1,0 +1,453 @@
+<!--
+ * @file index.html
+ * @description 范米花儿的网站模版，Trae搭建，仅供学习使用
+ * @author 范米花儿
+ * @copyright 范米花儿
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Templates</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+    <link rel="stylesheet" href="templates.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/icons/logo.svg" alt="Website Templates Logo" class="logo-icon">
+                <span class="logo-text">Website Templates</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">产品</a></li>
+                <li><a href="templates.html" class="active">模版中心</a></li>
+                <li><a href="learn.html">学习&帮助</a></li>
+                <li><a href="javascript:void(0)" class="login-button">登录/注册</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="solutions-section">
+            <!-- 精品模版展示区域 -->
+        <div class="templates-showcase">
+            <div class="section-block">
+                <div class="section-title">
+                    <h2>海量模版，<span class="highlight">助力企业数字化提效</span></h2>
+                    <p>支持开箱即用，也能灵活定制</p>
+                </div>
+
+                <!-- 搜索框 -->
+                <div class="template-search">
+                    <div class="search-container">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="搜索模版..." id="templateSearch">
+                        <button class="clear-button" id="clearSearch">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 模版分类导航 -->
+                <div class="template-categories">
+                    <div class="category-item" data-category="全部">全部</div>
+                    <div class="category-item" data-category="人事">人事</div>
+                    <div class="category-item" data-category="行政">行政</div>
+                    <div class="category-item" data-category="销售">销售</div>
+                    <div class="category-item" data-category="老板">老板</div>
+                    <div class="category-item" data-category="财务">财务</div>
+                </div>
+
+                <!-- 统一的模版展示区域 -->
+                <div class="template-grid" id="all-templates">
+                    <!-- 人事模版 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="hot-tag">HOT</div>
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="HR系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>HR综合管理系统</h3>
+                            <p>全面提升HR工作效能</p>
+                            <div class="template-features">
+                                <span class="feature-tag">一体全能</span>
+                                <span class="feature-tag">数据互通</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 人才招聘系统 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="人才招聘系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>人才招聘系统</h3>
+                            <p>高效管理招聘流程</p>
+                            <div class="template-features">
+                                <span class="feature-tag">简历筛选</span>
+                                <span class="feature-tag">面试管理</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 员工档案管理 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/kpi-system.png" alt="员工档案管理预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>员工档案管理</h3>
+                            <p>员工信息全生命周期管理</p>
+                            <div class="template-features">
+                                <span class="feature-tag">档案电子化</span>
+                                <span class="feature-tag">信息追踪</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 薪酬管理系统 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/schedule-system.png" alt="薪酬管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>薪酬管理系统</h3>
+                            <p>智能薪酬核算与发放</p>
+                            <div class="template-features">
+                                <span class="feature-tag">薪酬计算</span>
+                                <span class="feature-tag">福利管理</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 考勤管理系统 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="考勤管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>考勤管理系统</h3>
+                            <p>灵活的考勤管理方案</p>
+                            <div class="template-features">
+                                <span class="feature-tag">智能打卡</span>
+                                <span class="feature-tag">假期管理</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 人才发展系统 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/kpi-system.png" alt="人才发展系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>人才发展系统</h3>
+                            <p>员工职业发展规划</p>
+                            <div class="template-features">
+                                <span class="feature-tag">晋升管理</span>
+                                <span class="feature-tag">职业规划</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 员工关系管理 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/schedule-system.png" alt="员工关系管理预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>员工关系管理</h3>
+                            <p>和谐劳动关系维护</p>
+                            <div class="template-features">
+                                <span class="feature-tag">合同管理</span>
+                                <span class="feature-tag">关系维护</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 人力资源分析 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="人力资源分析预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>人力资源分析</h3>
+                            <p>HR数据深度分析</p>
+                            <div class="template-features">
+                                <span class="feature-tag">数据分析</span>
+                                <span class="feature-tag">决策支持</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 企业文化建设 -->
+                    <div class="template-card" data-category="人事">
+                        <div class="template-preview">
+                            <img src="assets/images/kpi-system.png" alt="企业文化建设预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>企业文化建设</h3>
+                            <p>打造优秀企业文化</p>
+                            <div class="template-features">
+                                <span class="feature-tag">文化传播</span>
+                                <span class="feature-tag">活动管理</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 行政模版 -->
+                    <div class="template-card" data-category="行政">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="会议室预订系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>会议室预订系统</h3>
+                            <p>高效管理企业会议资源</p>
+                            <div class="template-features">
+                                <span class="feature-tag">智能预订</span>
+                                <span class="feature-tag">资源管理</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 办公用品管理 -->
+                    <div class="template-card" data-category="行政">
+                        <div class="template-preview">
+                            <img src="assets/images/kpi-system.png" alt="办公用品管理预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>办公用品管理</h3>
+                            <p>规范化办公物资管理流程</p>
+                            <div class="template-features">
+                                <span class="feature-tag">库存管理</span>
+                                <span class="feature-tag">申领审批</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 车辆管理系统 -->
+                    <div class="template-card" data-category="行政">
+                        <div class="template-preview">
+                            <img src="assets/images/schedule-system.png" alt="车辆管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>车辆管理系统</h3>
+                            <p>企业用车全流程管理</p>
+                            <div class="template-features">
+                                <span class="feature-tag">预约派车</span>
+                                <span class="feature-tag">费用统计</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 资产管理系统 -->
+                    <div class="template-card" data-category="行政">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="资产管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>资产管理系统</h3>
+                            <p>企业固定资产全生命周期管理</p>
+                            <div class="template-features">
+                                <span class="feature-tag">资产追踪</span>
+                                <span class="feature-tag">折旧计算</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 销售模版 -->
+                    <div class="template-card" data-category="销售">
+                        <div class="hot-tag">HOT</div>
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="CRM系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>CRM客户管理系统</h3>
+                            <p>全方位客户关系管理</p>
+                            <div class="template-features">
+                                <span class="feature-tag">客户跟进</span>
+                                <span class="feature-tag">商机管理</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 销售预测系统 -->
+                    <div class="template-card" data-category="销售">
+                        <div class="template-preview">
+                            <img src="assets/images/schedule-system.png" alt="销售预测系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>销售预测系统</h3>
+                            <p>智能销售预测分析</p>
+                            <div class="template-features">
+                                <span class="feature-tag">数据预测</span>
+                                <span class="feature-tag">趋势分析</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 销售激励系统 -->
+                    <div class="template-card" data-category="销售">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="销售激励系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>销售激励系统</h3>
+                            <p>销售团队激励管理</p>
+                            <div class="template-features">
+                                <span class="feature-tag">绩效考核</span>
+                                <span class="feature-tag">奖金计算</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 客户满意度管理 -->
+                    <div class="template-card" data-category="销售">
+                        <div class="template-preview">
+                            <img src="assets/images/kpi-system.png" alt="客户满意度管理预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>客户满意度管理</h3>
+                            <p>客户体验监控与分析</p>
+                            <div class="template-features">
+                                <span class="feature-tag">满意度调查</span>
+                                <span class="feature-tag">改进追踪</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 老板模版 -->
+                    <div class="template-card" data-category="老板">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="经营分析系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>经营分析系统</h3>
+                            <p>企业经营数据一目了然</p>
+                            <div class="template-features">
+                                <span class="feature-tag">实时监控</span>
+                                <span class="feature-tag">多维分析</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 项目管理系统 -->
+                    <div class="template-card" data-category="老板">
+                        <div class="template-preview">
+                            <img src="assets/images/kpi-system.png" alt="项目管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>项目管理系统</h3>
+                            <p>全局掌控项目进度与资源</p>
+                            <div class="template-features">
+                                <span class="feature-tag">进度跟踪</span>
+                                <span class="feature-tag">资源调配</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 目标管理系统 -->
+                    <div class="template-card" data-category="老板">
+                        <div class="template-preview">
+                            <img src="assets/images/schedule-system.png" alt="目标管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>目标管理系统</h3>
+                            <p>企业战略目标分解与追踪</p>
+                            <div class="template-features">
+                                <span class="feature-tag">OKR管理</span>
+                                <span class="feature-tag">目标分解</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 风险控制系统 -->
+                    <div class="template-card" data-category="老板">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="风险控制系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>风险控制系统</h3>
+                            <p>全面把控企业运营风险</p>
+                            <div class="template-features">
+                                <span class="feature-tag">风险预警</span>
+                                <span class="feature-tag">合规管理</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 财务模版 -->
+                    <div class="template-card" data-category="财务">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="费用报销系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>费用报销系统</h3>
+                            <p>简化报销流程，提高效率</p>
+                            <div class="template-features">
+                                <span class="feature-tag">智能报销</span>
+                                <span class="feature-tag">预算控制</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 预算管理系统 -->
+                    <div class="template-card" data-category="财务">
+                        <div class="template-preview">
+                            <img src="assets/images/kpi-system.png" alt="预算管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>预算管理系统</h3>
+                            <p>科学预算分配与管理</p>
+                            <div class="template-features">
+                                <span class="feature-tag">预算编制</span>
+                                <span class="feature-tag">执行监控</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 财务分析系统 -->
+                    <div class="template-card" data-category="财务">
+                        <div class="template-preview">
+                            <img src="assets/images/schedule-system.png" alt="财务分析系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>财务分析系统</h3>
+                            <p>深入洞察企业财务状况</p>
+                            <div class="template-features">
+                                <span class="feature-tag">财务报表</span>
+                                <span class="feature-tag">指标分析</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 发票管理系统 -->
+                    <div class="template-card" data-category="财务">
+                        <div class="template-preview">
+                            <img src="assets/images/hr-system.png" alt="发票管理系统预览">
+                        </div>
+                        <div class="template-info">
+                            <h3>发票管理系统</h3>
+                            <p>高效处理发票及税务管理</p>
+                            <div class="template-features">
+                                <span class="feature-tag">发票管理</span>
+                                <span class="feature-tag">税务处理</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; @范米花儿. All rights reserved.</p>
+    </footer>
+    <script src="templates.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!--
+ * @file index.html
+ * @description 范米花儿的网站模版，Trae搭建，仅供学习使用
+ * @author 范米花儿
+ * @copyright 范米花儿
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Templates</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+    <link rel="stylesheet" href="learn.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/icons/logo.svg" alt="Website Templates Logo" class="logo-icon">
+                <span class="logo-text">Website Templates</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">产品</a></li>
+                <li><a href="templates.html">模版中心</a></li>
+                <li><a href="learn.html" class="active">学习&帮助</a></li>
+                <li><a href="javascript:void(0)" class="login-button">登录/注册</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="templates-showcase">
+            <div class="section-block">
+                <div class="section-title">
+                    <h2>嗨，<span class="highlight">您想查些什么呢？
+                    </span></h2>
+                </div>
+
+                <!-- 搜索框 -->
+                <div class="template-search">
+                    <div class="search-container">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="搜索帮助文档..." id="docsSearch">
+                        <button class="clear-button" id="clearSearch">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="docs-section">
+            <nav class="docs-nav">
+                <h2 class="docs-nav-title">
+                    目录
+                    <button class="toggle-nav" aria-label="折叠导航菜单">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </h2>
+                <ul class="docs-nav-list">
+                    <li class="docs-nav-item">
+                        <a href="#quick-start" class="docs-nav-link active">快速入门</a>
+                        <ul class="docs-nav-sublist">
+                            <li><a href="#quick-start" class="docs-nav-link">平台简介</a></li>
+                            <li><a href="#quick-start" class="docs-nav-link">基础概念</a></li>
+                            <li><a href="#quick-start" class="docs-nav-link">创建第一个应用</a></li>
+                        </ul>
+                    </li>
+                    <li class="docs-nav-item">
+                        <a href="#features-guide" class="docs-nav-link">功能指南</a>
+                        <ul class="docs-nav-sublist">
+                            <li><a href="#features-guide" class="docs-nav-link">页面设计</a></li>
+                            <li><a href="#features-guide" class="docs-nav-link">数据管理</a></li>
+                            <li><a href="#features-guide" class="docs-nav-link">工作流</a></li>
+                        </ul>
+                    </li>
+                    <li class="docs-nav-item">
+                        <a href="#best-practices" class="docs-nav-link">最佳实践</a>
+                    </li>
+                    <li class="docs-nav-item">
+                        <a href="#faq" class="docs-nav-link">常见问题</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="docs-content">
+                <!-- 快速入门部分 -->
+                <div class="content-section" id="quick-start">
+                    <h1>快速入门</h1>
+                    <p>欢迎使用低代码开发平台。本指南将帮助您快速了解平台的基本功能和使用方法。</p>
+                    
+                    <h2>平台简介</h2>
+                    <p>这是一个强大而灵活的低代码开发平台，旨在帮助企业快速构建和部署各类应用系统。通过可视化的开发方式，大幅提升开发效率，降低技术门槛。</p>
+                    
+                    <h2>基础概念</h2>
+                    <p>在开始使用平台之前，让我们先了解一些基本概念：</p>
+                    <ul>
+                        <li><strong>应用（Application）</strong>：独立的业务系统单元</li>
+                        <li><strong>页面（Page）</strong>：应用中的具体功能界面</li>
+                        <li><strong>组件（Component）</strong>：构建页面的基础元素</li>
+                        <li><strong>数据模型（Model）</strong>：定义数据结构和关系</li>
+                    </ul>
+                    
+                    <h2>创建第一个应用</h2>
+                    <p>按照以下步骤，快速创建您的第一个应用：</p>
+                    <ol>
+                        <li>登录平台后，点击"创建应用"按钮</li>
+                        <li>选择合适的应用模板或从零开始</li>
+                        <li>配置应用基本信息</li>
+                        <li>开始设计您的第一个页面</li>
+                    </ol>
+                </div>
+                
+                <!-- 功能指南部分 -->
+                <div class="content-section" id="features-guide">
+                    <h1>功能指南</h1>
+                    
+                    <h2>页面设计</h2>
+                    <p>使用直观的可视化界面，通过拖拽方式快速构建应用页面：</p>
+                    <ul>
+                        <li>组件库：丰富的预置组件</li>
+                        <li>布局设计：灵活的页面布局</li>
+                        <li>样式配置：可视化的样式编辑</li>
+                    </ul>
+                    
+                    <h2>数据管理</h2>
+                    <p>强大的数据管理功能，轻松处理业务数据：</p>
+                    <ul>
+                        <li>数据建模：可视化数据结构设计</li>
+                        <li>数据集成：多种数据源连接</li>
+                        <li>数据服务：RESTful API支持</li>
+                    </ul>
+                    
+                    <h2>工作流</h2>
+                    <p>自定义业务流程，实现自动化处理：</p>
+                    <ul>
+                        <li>流程设计：可视化流程编排</li>
+                        <li>条件控制：灵活的业务规则</li>
+                        <li>任务管理：完整的生命周期</li>
+                    </ul>
+                </div>
+                
+                <!-- 最佳实践部分 -->
+                <div class="content-section" id="best-practices">
+                    <h1>最佳实践</h1>
+                    <p>基于大量客户使用经验，我们总结了以下最佳实践建议：</p>
+                    
+                    <h2>应用设计</h2>
+                    <ul>
+                        <li>合理规划应用架构</li>
+                        <li>遵循组件化开发原则</li>
+                        <li>注重用户体验设计</li>
+                    </ul>
+                    
+                    <h2>性能优化</h2>
+                    <ul>
+                        <li>合理使用数据缓存</li>
+                        <li>优化数据查询逻辑</li>
+                        <li>减少不必要的服务调用</li>
+                    </ul>
+                </div>
+                
+                <!-- 常见问题部分 -->
+                <div class="content-section" id="faq">
+                    <h1>常见问题</h1>
+                    
+                    <h2>账号相关</h2>
+                    <ul>
+                        <li>
+                            <h3>如何注册新账号？</h3>
+                            <p>访问登录页面，点击"注册"按钮，填写相关信息即可完成注册。</p>
+                        </li>
+                        <li>
+                            <h3>忘记密码怎么办？</h3>
+                            <p>在登录页面点击"忘记密码"，通过邮箱验证重置密码。</p>
+                        </li>
+                    </ul>
+                    
+                    <h2>使用相关</h2>
+                    <ul>
+                        <li>
+                            <h3>如何部署应用？</h3>
+                            <p>在应用管理页面，点击"部署"按钮，选择部署环境即可。</p>
+                        </li>
+                        <li>
+                            <h3>如何导入现有数据？</h3>
+                            <p>使用数据管理模块的导入功能，支持Excel、CSV等格式。</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; @范米花儿. All rights reserved.</p>
+    </footer>
+    <script src="learn.js"></script>
+</body>
+</html>
